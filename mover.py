@@ -7,14 +7,14 @@ def getIdleTime():
     return (win32api.GetTickCount() - win32api.GetLastInputInfo()) / 1000.0
 
 
-def moveMouse():
+def pressShift():
     while(getIdleTime() > 240):
         pyautogui.press('shift')
     return 0
 
 while (True):
     if (getIdleTime() > 240):
-        moveMouse()
+        pressShift()
     time.sleep(30)
 
 
