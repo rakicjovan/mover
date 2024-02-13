@@ -2,6 +2,7 @@ import win32api
 import time
 import pyautogui
 
+pyautogui.FAILSAFE = False
 
 def getIdleTime():
     return (win32api.GetTickCount() - win32api.GetLastInputInfo()) / 1000.0
